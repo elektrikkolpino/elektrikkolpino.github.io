@@ -3,181 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Электрик в Колпино | Вызов на дом Колпинский район</title>
+    <title>Электрик в Колпино | Вызов на дом</title>
     <style>
         :root {
             --main-color: #1e293b;
             --accent-color: #f59e0b;
             --text-color: #334155;
-            --bg-light: #f8fafc;
+            --whatsapp-color: #25d366;
+            --telegram-color: #0088cc;
         }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #ffffff;
-        }
-
-        header {
-            background-color: var(--main-color);
-            color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        .subheader {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            margin-bottom: 25px;
-        }
-
-        .phone-box {
-            display: inline-block;
-            background-color: var(--accent-color);
-            padding: 12px 25px;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-
-        .phone-link {
-            color: #111827;
-            font-size: 1.4rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .intro {
-            font-size: 1.1rem;
-            margin: 30px 0;
-            text-align: justify;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--main-color);
-            margin: 35px 0 15px 0;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 8px;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 12px;
-        }
-
-        li::before {
-            content: "⚡";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
-
-        .conditions-grid {
-            background-color: var(--bg-light);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--main-color);
-            margin: 25px 0;
-        }
-
-        .conditions-grid p {
-            margin-bottom: 10px;
-        }
-
-        .conditions-grid p:last-child {
-            margin-bottom: 0;
-        }
-
-        footer {
-            background-color: var(--main-color);
-            color: #94a3b8;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 60px;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 1.6rem; }
-            .subheader { font-size: 1rem; }
-            .phone-link { font-size: 1.2rem; }
-        }
+        body { font-family: sans-serif; line-height: 1.6; color: var(--text-color); margin: 0; padding: 0; }
+        header { background-color: var(--main-color); color: #fff; padding: 30px 20px; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .phone-box { background-color: var(--accent-color); display: inline-block; padding: 10px 20px; border-radius: 8px; margin: 15px 0; }
+        .phone-link, .btn { color: #111827; text-decoration: none; font-weight: bold; }
+        .messenger-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+        .btn { padding: 10px 20px; border-radius: 6px; color: #fff; display: inline-block; }
+        .btn-wa { background-color: var(--whatsapp-color); }
+        .btn-tg { background-color: var(--telegram-color); }
+        h1 { margin: 0 0 10px; }
+        .services-list { list-style: none; padding: 0; }
+        .services-list li { margin-bottom: 10px; }
+        footer { background-color: var(--main-color); color: #94a3b8; text-align: center; padding: 20px; margin-top: 40px; }
+        footer a { color: #fff; text-decoration: none; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="container">
             <h1>Электрик в Колпино</h1>
-            <p class="subheader">Электромонтажные работы в Колпинском районе Санкт-Петербурга</p>
+            <p>Выездной электромонтаж и ремонт в Колпинском районе</p>
             <div class="phone-box">
                 <a href="tel:+79500308830" class="phone-link">📞 +7 (950) 030-88-30</a>
+            </div>
+            <div class="messenger-buttons">
+                <a href="https://wa.me" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+                <a href="https://t.me" target="_blank" class="btn btn-tg">✈️ Telegram</a>
             </div>
         </div>
     </header>
 
     <div class="container">
-        <p class="intro">
-            Профессиональное техническое обслуживание, ремонт и модернизация систем электроснабжения жилого и коммерческого фонда. Выезд мастера на дом осуществляется по всей территории города Колпино, а также в близлежащие населенные пункты Колпинского района для выполнения задач любой сложности — от локального устранения неисправностей до полной замены проводки.
-        </p>
-
-        <h2>Перечень выполняемых работ</h2>
-        <ul>
-            <li><strong>Диагностика и ремонт:</strong> поиск мест повреждения кабеля, устранение коротких замыканий, восстановление подачи электроэнергии после аварийных ситуаций.</li>
-            <li><strong>Монтажные работы:</strong> установка, перенос и замена штепсельных розеток, выключателей, диммеров, распаячных коробок.</li>
-            <li><strong>Сборка и ремонт электрощитов:</strong> замена автоматических выключателей, устройств защитного отключения (УЗО), дифференциальных автоматов, приборов учета.</li>
-            <li><strong>Подключение оборудования:</strong> стационарное подключение бытовой техники высокой мощности (варочные панели, духовые шкафы, электроплиты, водонагреватели) с прокладкой отдельной силовой линии от щита.</li>
-            <li><strong>Осветительные приборы:</strong> монтаж и подключение люстр, потолочных и настенных светильников, точечной и светодиодной подсветки.</li>
-            <li><strong>Замена электропроводки:</strong> полная или частичная замена кабельных линий, штробление стен, прокладка кабеля скрытым или открытым способом.</li>
+        <h2>Основные услуги</h2>
+        <ul class="services-list">
+            <li>⚡ Диагностика и устранение коротких замыканий</li>
+            <li>⚡ Установка и замена розеток, выключателей, люстр</li>
+            <li>⚡ Сборка и ремонт электрощитов, установка автоматов и УЗО</li>
+            <li>⚡ Подключение мощных бытовых приборов (плиты, варочные панели)</li>
+            <li>⚡ Полная или частичная замена электропроводки</li>
         </ul>
-
-        <h2>Условия и география оказания услуг</h2>
-        <div class="conditions-grid">
-            <p><strong>Зона обслуживания:</strong> Город Колпино, а также поселки Металлострой, Понтонный, Саперный и Тельмана.</p>
-            <p><strong>Стандарты:</strong> Все технологические операции выполняются в строгом соответствии с требованиями Правил устройства электроустановок (ПУЭ) и строительных норм (СНиП).</p>
-            <p><strong>Расчет стоимости:</strong> Точный объем работ и необходимых материалов определяется на объекте до начала монтажа по согласованию с заказчиком.</p>
-        </div>
-
-        <h2>Порядок взаимодействия</h2>
-        <p>1. Прием обращения по телефону и предварительный разбор технической задачи.</p>
-        <p>2. Согласование даты и времени выезда мастера для проведения осмотра или ремонта.</p>
-        <p>3. Проведение диагностики, выполнение запланированных монтажных операций и проверка работоспособности системы.</p>
     </div>
 
     <footer>
-        <div class="container">
-            <p>Колпино, Санкт-Петербург. Телефон для заявок: <a href="tel:+79500308830">+7 (950) 030-88-30</a></p>
-        </div>
+        <p>Телефон для связи: <a href="tel:+79500308830">+7 (950) 030-88-30</a></p>
     </footer>
-
 </body>
 </html>
