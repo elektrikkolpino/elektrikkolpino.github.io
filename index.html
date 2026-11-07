@@ -5,35 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Электрик в Колпино | Неоновый Эксперт</title>
     <style>
-        :root { --bg-black: #050505; --neon-blue: #00f0ff; --neon-pink: #ff007f; --neon-green: #39ff14; --text-white: #ffffff; --text-gray: #a0a0a0; }
+        :root {
+            --bg-black: #050505;
+            --neon-blue: #00f0ff;
+            --neon-pink: #ff007f;
+            --neon-green: #39ff14;
+            --text-white: #ffffff;
+            --text-gray: #a0a0a0;
+        }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; }
         body { background-color: var(--bg-black); color: var(--text-white); line-height: 1.6; overflow-x: hidden; }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
         nav { background-color: rgba(5, 5, 5, 0.95); padding: 20px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--neon-blue); box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); }
         .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         .logo { font-weight: bold; color: var(--text-white); font-size: 1.4rem; text-decoration: none; text-shadow: 0 0 10px var(--neon-blue); }
         .menu { display: flex; gap: 25px; list-style: none; }
         .menu a { color: var(--text-white); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease; padding: 8px 16px; border-radius: 4px; border: 1px solid transparent; }
         .menu a:hover, .menu a.active { color: var(--neon-blue); border-color: var(--neon-blue); background-color: rgba(0, 240, 255, 0.05); box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+
         header { text-align: center; padding: 80px 20px; background: radial-gradient(circle at center, #111 0%, #050505 100%); }
         h1 { font-size: 3rem; margin-bottom: 15px; color: var(--text-white); text-shadow: 0 0 15px var(--neon-blue); }
         header p { color: var(--text-gray); font-size: 1.3rem; margin-bottom: 40px; }
+
         .phone-box { margin-bottom: 30px; }
-        .phone-link { display: inline-block; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 18px 40px; font-size: 1.6rem; font-weight: bold; text-decoration: none; border-radius: 50px; text-shadow: 0 0 10px var(--neon-pink); box-shadow: 0 0 15px rgba(255, 0, 127, 0.3); transition: all 0.4s ease; }
+        .phone-link { display: inline-block; background-color: transparent; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 18px 40px; font-size: 1.6rem; font-weight: bold; text-decoration: none; border-radius: 50px; text-shadow: 0 0 10px var(--neon-pink); box-shadow: 0 0 15px rgba(255, 0, 127, 0.3); transition: all 0.4s ease; }
         .phone-link:hover { color: var(--bg-black); background-color: var(--neon-pink); box-shadow: 0 0 30px var(--neon-pink); }
+        
         .messenger-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .btn { display: inline-flex; align-items: center; padding: 12px 30px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; border: 2px solid transparent; transition: all 0.3s ease; }
         .btn:hover { transform: translateY(-3px); }
         .btn-wa { border-color: var(--neon-green); color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
-        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); }
+        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-green); }
         .btn-tg { border-color: var(--neon-blue); color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); }
-        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); }
+        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-blue); }
+
         h2 { font-size: 1.8rem; color: var(--text-white); margin: 50px 0 25px 0; border-left: 4px solid var(--neon-pink); padding-left: 15px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 30px 0; }
-        .card { background-color: #0d0d0d; padding: 30px; border-radius: 12px; border: 1px solid #222; text-decoration: none; color: var(--text-white); transition: all 0.3s ease; }
+        .card { background-color: #0d0d0d; padding: 30px; border-radius: 12px; border: 1px solid #222; transition: all 0.3s ease; text-decoration: none; color: var(--text-white); }
         .card:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 240, 255, 0.3); transform: translateY(-5px); }
         .card h3 { color: var(--neon-blue); margin-bottom: 15px; font-size: 1.4rem; }
-        .card p { color: var(--text-gray); font-size: 1rem; }
+        
         .info-section { background-color: #0d0d0d; padding: 30px; border-radius: 12px; margin: 40px 0; border: 1px solid #222; color: var(--text-gray); }
         footer { text-align: center; padding: 40px 20px; color: var(--text-gray); border-top: 1px solid #222; margin-top: 80px; }
         footer a { color: var(--neon-blue); text-decoration: none; }
