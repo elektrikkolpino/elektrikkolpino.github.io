@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Замена розеток в Колпино</title>
     <style>
-        :root { --bg-black: #050505; --neon-blue: #00f0ff; --neon-pink: #ff007f; --text-white: #ffffff; --text-gray: #a0a0a0; }
+        :root { --bg-black: #050505; --neon-blue: #00f0ff; --neon-pink: #ff007f; --neon-green: #39ff14; --text-white: #ffffff; --text-gray: #a0a0a0; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; }
         body { background-color: var(--bg-black); color: var(--text-white); line-height: 1.6; }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
@@ -31,6 +31,14 @@
         .phone-link { display: inline-block; background-color: transparent; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 15px 35px; font-size: 1.4rem; font-weight: bold; text-decoration: none; border-radius: 50px; transition: all 0.3s; margin-top: 20px; text-shadow: 0 0 5px var(--neon-pink); }
         .phone-link:hover { background-color: var(--neon-pink); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-pink); text-shadow: none; }
         
+        .messenger-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
+        .btn { display: inline-flex; align-items: center; padding: 12px 30px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; border: 2px solid transparent; transition: all 0.3s ease; }
+        .btn:hover { transform: translateY(-3px); }
+        .btn-wa { border-color: var(--neon-green); color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
+        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-green); text-shadow: none; }
+        .btn-tg { border-color: var(--neon-blue); color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); }
+        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-blue); text-shadow: none; }
+
         footer { text-align: center; padding: 40px 20px; color: var(--text-gray); border-top: 1px solid #222; margin-top: 60px; }
     </style>
 </head>
@@ -42,7 +50,7 @@
             <ul class="menu">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="rozetki.html" class="active">Розетки</a></li>
-                <li><a href="avtomaty.html">Автомахы</a></li>
+                <li><a href="avtomaty.html">Автоматы</a></li>
             </ul>
         </div>
     </nav>
@@ -66,7 +74,13 @@
         <div class="cta-box">
             <h3>Требуется ремонт или перенос розеток?</h3>
             <p>Свяжитесь со мной для согласования удобного времени проведения монтажных работ</p>
+            
             <a href="tel:+79500308830" class="phone-link">📞 ВЫЗВАТЬ: +7 (950) 030-88-30</a>
+            
+            <div class="messenger-buttons">
+                <a href="https://wa.me" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+                <a href="https://t.me" target="_blank" class="btn btn-tg">✈️ Telegram</a>
+            </div>
         </div>
     </div>
 
