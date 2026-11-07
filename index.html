@@ -3,69 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Электрик в Колпино | Вызов на дом Колпинский район</title>
+    <title>Электрик в Колпино | Неоновый Эксперт</title>
     <style>
-        :root { --main-color: #1e293b; --accent-color: #f59e0b; --text-color: #334155; --bg-light: #f8fafc; --whatsapp-color: #25d366; --telegram-color: #0088cc; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-color); background-color: #ffffff; }
-        header { background-color: var(--main-color); color: #ffffff; padding: 40px 20px; text-align: center; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { font-size: 2rem; margin-bottom: 10px; color: #ffffff; }
-        .subheader { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 25px; }
-        .phone-box { display: inline-block; background-color: var(--accent-color); padding: 12px 25px; border-radius: 8px; margin-top: 10px; }
-        .phone-link { color: #111827; font-size: 1.4rem; font-weight: bold; text-decoration: none; }
-        .messenger-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
-        .btn { display: inline-flex; align-items: center; padding: 10px 20px; border-radius: 6px; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 1rem; transition: opacity 0.2s; }
-        .btn:hover { opacity: 0.9; }
-        .btn-wa { background-color: var(--whatsapp-color); }
-        .btn-tg { background-color: var(--telegram-color); }
-        .intro { font-size: 1.1rem; margin: 30px 0; text-align: justify; }
-        h2 { font-size: 1.5rem; color: var(--main-color); margin: 35px 0 15px 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
-        ul { list-style: none; }
-        li { position: relative; padding-left: 25px; margin-bottom: 12px; }
-        li::before { content: "⚡"; position: absolute; left: 0; color: var(--accent-color); }
-        .conditions-grid { background-color: var(--bg-light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--main-color); margin: 25px 0; }
-        .conditions-grid p { margin-bottom: 10px; }
-        .conditions-grid p:last-child { margin-bottom: 0; }
-        footer { background-color: var(--main-color); color: #94a3b8; text-align: center; padding: 25px 20px; margin-top: 60px; font-size: 0.9rem; }
-        footer a { color: #ffffff; text-decoration: none; }
-        @media (max-width: 600px) { h1 { font-size: 1.6rem; } .subheader { font-size: 1rem; } .phone-link { font-size: 1.2rem; } .messenger-buttons { flex-direction: column; gap: 10px; align-items: center; } .btn { width: 100%; max-width: 260px; justify-content: center; } }
+        :root {
+            --bg-black: #050505;
+            --neon-blue: #00f0ff;
+            --neon-pink: #ff007f;
+            --neon-green: #39ff14;
+            --text-white: #ffffff;
+            --text-gray: #a0a0a0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body { background-color: var(--bg-black); color: var(--text-white); line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
+        /* Неоновое навигационное меню */
+        nav { background-color: rgba(5, 5, 5, 0.95); padding: 20px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--neon-blue); box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); }
+        .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-weight: bold; color: var(--text-white); font-size: 1.4rem; text-decoration: none; text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue); }
+        .menu { display: flex; gap: 25px; list-style: none; }
+        .menu a { color: var(--text-white); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease; padding: 8px 16px; border-radius: 4px; border: 1px solid transparent; }
+        
+        /* Свечение кнопок меню при наведении */
+        .menu a:hover, .menu a.active { 
+            color: var(--neon-blue); 
+            border-color: var(--neon-blue);
+            background-color: rgba(0, 240, 255, 0.05);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), inset 0 0 10px rgba(0, 240, 255, 0.2);
+            text-shadow: 0 0 8px var(--neon-blue);
+        }
+
+        /* Шапка сайта */
+        header { text-align: center; padding: 80px 20px; background: radial-gradient(circle at center, #111 0%, #050505 100%); }
+        h1 { font-size: 3rem; margin-bottom: 15px; color: var(--text-white); text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue); }
+        header p { color: var(--text-gray); font-size: 1.3rem; margin-bottom: 40px; }
+
+        /* Пульсирующая неоновая кнопка вызова */
+        .phone-box { margin-bottom: 30px; }
+        .phone-link { display: inline-block; background-color: transparent; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 18px 40px; font-size: 1.6rem; font-weight: bold; text-decoration: none; border-radius: 50px; text-shadow: 0 0 10px var(--neon-pink); box-shadow: 0 0 15px rgba(255, 0, 127, 0.3); transition: all 0.4s ease; animation: neonPulse 1.5s infinite alternate; }
+        .phone-link:hover { color: var(--bg-black); background-color: var(--neon-pink); box-shadow: 0 0 30px var(--neon-pink); text-shadow: none; transform: scale(1.03); }
+        
+        /* Мессенджеры */
+        .messenger-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; padding: 12px 30px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; border: 2px solid transparent; transition: all 0.3s ease; }
+        .btn:hover { transform: translateY(-3px); }
+        .btn-wa { border-color: var(--neon-green); color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); box-shadow: 0 0 10px rgba(57, 255, 20, 0.2); }
+        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-green); text-shadow: none; }
+        .btn-tg { border-color: var(--neon-blue); color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); }
+        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-blue); text-shadow: none; }
+
+        /* Заголовки разделов */
+        h2 { font-size: 1.8rem; color: var(--text-white); margin: 50px 0 25px 0; text-shadow: 0 0 10px var(--neon-pink); border-left: 4px solid var(--neon-pink); padding-left: 15px; }
+
+        /* Карточки услуг с неоновым свечением */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 30px 0; }
+        .card { background-color: #0d0d0d; padding: 30px; border-radius: 12px; border: 1px solid #222; transition: all 0.3s ease; text-decoration: none; color: var(--text-white); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .card:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 240, 255, 0.3); transform: translateY(-5px); }
+        .card h3 { color: var(--neon-blue); margin-bottom: 15px; font-size: 1.4rem; text-shadow: 0 0 5px var(--neon-blue); }
+        .card p { color: var(--text-gray); font-size: 1rem; }
+
+        .info-section { background-color: #0d0d0d; padding: 30px; border-radius: 12px; margin: 40px 0; border: 1px solid #222; }
+        .info-section p { color: var(--text-gray); font-size: 1.1rem; }
+
+        footer { text-align: center; padding: 40px 20px; color: var(--text-gray); border-top: 1px solid #222; margin-top: 80px; }
+        footer a { color: var(--neon-blue); text-decoration: none; text-shadow: 0 0 5px var(--neon-blue); }
+
+        /* Анимация пульсации неона */
+        @keyframes neonPulse {
+            from { box-shadow: 0 0 10px rgba(255, 0, 127, 0.3), inset 0 0 5px rgba(255, 0, 127, 0.1); }
+            to { box-shadow: 0 0 25px var(--neon-pink), inset 0 0 10px rgba(255, 0, 127, 0.4); }
+        }
+
+        @media (max-width: 680px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            h1 { font-size: 2.2rem; }
+            .phone-link { font-size: 1.2rem; padding: 15px 30px; }
+        }
     </style>
 </head>
 <body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">⚡ ЭЛЕКТРИК-КОЛПИНО</a>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="rozetki.html">Розетки</a></li>
+                <li><a href="avtomaty.html">Автоматы</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
-            <h1>Электрик в Колпино</h1>
-            <p class="subheader">Электромонтажные работы в Колпинском районе Санкт-Петербурга</p>
-            <div class="phone-box"><a href="tel:+79500308830" class="phone-link">📞 +7 (950) 030-88-30</a></div>
+            <h1>ВЫЗОВ ЭЛЕКТРИКА В КОЛПИНО</h1>
+            <p>Профессиональные электромонтажные работы в Колпинском районе</p>
+            <div class="phone-box">
+                <a href="tel:+79500308830" class="phone-link">📞 ТЕЛЕФОН: +7 (950) 030-88-30</a>
+            </div>
             <div class="messenger-buttons">
-                <a href="https://wa.me" target="_blank" class="btn btn-wa">💬 Написать в WhatsApp</a>
-                <a href="https://t.me" target="_blank" class="btn btn-tg">✈️ Написать в Telegram</a>
+                <a href="https://wa.me" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+                <a href="https://t.me" target="_blank" class="btn btn-tg">✈️ Telegram</a>
             </div>
         </div>
     </header>
+
     <div class="container">
-        <p class="intro">Профессиональное техническое обслуживание, ремонт и модернизация систем электроснабжения в Колпино и Колпинском районе.</p>
-        <h2>Перечень выполняемых работ</h2>
-        <ul>
-            <li><strong>Диагностика и ремонт:</strong> поиск повреждений кабеля, устранение коротких замыканий, восстановление питания.</li>
-            <li><strong>Монтажные работы:</strong> установка и замена розеток, выключателей, распаячных коробок.</li>
-            <li><strong>Электрощиты:</strong> замена автоматов, УЗО, дифференциальных автоматов и счетчиков.</li>
-            <li><strong>Подключение оборудования:</strong> силовые линии для варочных панелей, духовых шкафов и водонагревателей.</li>
-            <li><strong>Освещение:</strong> монтаж люстр, светильников и светодиодной подсветки.</li>
-            <li><strong>Проводка:</strong> частичная или полная замена кабельных линий, штробление.</li>
-        </ul>
-        <h2>Условия и география оказания услуг</h2>
-        <div class="conditions-grid">
-            <p><strong>Зона обслуживания:</strong> Город Колпино, поселки Металлострой, Понтонный, Саперный и Тельмана.</p>
-            <p><strong>Стандарты:</strong> Работы выполняются по требованиям ПУЭ и СНиП.</p>
-            <p><strong>Стоимость:</strong> Определяется на объекте до начала монтажа.</p>
+        <h2>НАПРАВЛЕНИЯ РАБОТ</h2>
+        
+        <div class="services-grid">
+            <a href="rozetki.html" class="card">
+                <h3>Замена розеток →</h3>
+                <p>Установка новых точек, надежный перенос выключателей, безопасное штробление стен и ремонт старых подрозетников.</p>
+            </a>
+            <a href="avtomaty.html" class="card">
+                <h3>Замена автоматов →</h3>
+                <p>Пересборка электрощитов, замена перегоревших пробок, монтаж современных УЗО и модульных выключателей защиты.</p>
+            </a>
+            <div class="card">
+                <h3>Другие услуги</h3>
+                <p>Поиск скрытых повреждений кабеля, оперативное устранение коротких замыканий, монтаж люстр и полная замена проводки.</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <p>Выезд мастера на дом осуществляется по всему городу Колпино, включая Металлострой, Понтонный, Саперный и Тельмана. Все работы производятся в строгом соответствии со стандартами ПУЭ и СНиП. Точный расчет сметы происходит на объекте до начала выполнения ремонта.</p>
         </div>
     </div>
+
     <footer>
-        <div class="container">
-            <p>Колпино, Санкт-Петербург. Телефон: <a href="tel:+79500308830">+7 (950) 030-88-30</a></p>
-        </div>
+        <p>Колпинский район, Санкт-Петербург. Заявки по телефону: <a href="tel:+79500308830">+7 (950) 030-88-30</a></p>
     </footer>
+
 </body>
 </html>
