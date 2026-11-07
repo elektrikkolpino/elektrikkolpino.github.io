@@ -19,7 +19,7 @@
         h1 { font-size: 2.3rem; margin-bottom: 10px; text-shadow: 0 0 15px var(--neon-blue); }
         header p { color: var(--text-gray); font-size: 1.1rem; margin-bottom: 25px; }
         .phone-link { display: inline-block; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 12px 30px; font-size: 1.3rem; font-weight: bold; text-decoration: none; border-radius: 50px; text-shadow: 0 0 10px var(--neon-pink); }
-        .messenger-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .messenger-buttons { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 20px; }
         .btn { display: inline-flex; align-items: center; padding: 10px 25px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; border: 2px solid transparent; transition: all 0.3s; }
         .btn-wa { border-color: var(--neon-green); color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
         .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); }
@@ -31,8 +31,22 @@
         .card h3 { color: var(--neon-blue); margin-bottom: 10px; font-size: 1.15rem; }
         .card p { color: var(--text-gray); font-size: 0.9rem; }
         h2 { font-size: 1.6rem; color: var(--text-white); margin: 40px 0 20px 0; text-shadow: 0 0 10px var(--neon-pink); }
-        .map-box { background-color: #0d0d0d; padding: 15px; border-radius: 12px; border: 1px solid #222; margin-top: 20px; }
+        
+        .streets-box { background-color: #0d0d0d; padding: 25px; border-radius: 12px; border: 1px solid #222; margin-top: 20px; }
+        .streets-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 5px 15px; 
+            font-size: 0.75rem; 
+            color: var(--text-gray);
+            margin-top: 15px;
+        }
+        .streets-grid span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .streets-grid span:hover { color: var(--neon-blue); }
+
         footer { text-align: center; padding: 30px 20px; color: var(--text-gray); border-top: 1px solid #222; margin-top: 50px; }
+        @media (max-width: 768px) { .streets-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .streets-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -44,9 +58,9 @@
                 <li><a href="rozetki.html">Розетки</a></li>
                 <li><a href="avtomaty.html">Автоматы</a></li>
                 <li><a href="kabel.html">Кабель</a></li>
-                <li><a href="schit.html">Щитки</a></li>
-                <li><a href="uzo.html">УЗО/Дифф</a></li>
-                <li><a href="tehnika.html">Техника</a></li>
+                <li><a href="avtomaty.html">Щитки</a></li>
+                <li><a href="avtomaty.html">УЗО/Дифф</a></li>
+                <li><a href="avtomaty.html">Техника</a></li>
             </ul>
         </div>
     </nav>
@@ -67,17 +81,67 @@
             <a href="rozetki.html" class="card"><h3>Розетки и выключатели</h3><p>Монтаж, ремонт болтающихся механизмов, перенос и штробление.</p></a>
             <a href="avtomaty.html" class="card"><h3>Замена автоматов</h3><p>Поиск замыканий, ликвидация пробок, установка модульной защиты.</p></a>
             <a href="kabel.html" class="card"><h3>Прокладка кабеля</h3><p>Монтаж проводки в гофре, кабель-каналах, скрытая разводка.</p></a>
-            <a href="schit.html" class="card"><h3>Переборка щитов</h3><p>Ревизия оборудования, маркировка, наведение порядка в щитках.</p></a>
-            <a href="uzo.html" class="card"><h3>УЗО и Дифавтоматы</h3><p>Защита от утечек тока, монтаж противопожарной автоматики.</p></a>
-            <a href="tehnika.html" class="card"><h3>Подключение техники</h3><p>Электроплиты, стиральные и посудомоечные машины, варочные панели.</p></a>
+            <a href="avtomaty.html" class="card"><h3>Переборка щитов</h3><p>Ревизия оборудования, маркировка, наведение порядка в щитках.</p></a>
+            <a href="avtomaty.html" class="card"><h3>УЗО и Дифавтоматы</h3><p>Защита от утечек тока, монтаж противопожарной автоматики.</p></a>
+            <a href="avtomaty.html" class="card"><h3>Подключение техники</h3><p>Электроплиты, стиральные и посудомоечные машины, варочные панели.</p></a>
         </div>
-      <h2>ЗОНА ОБХВАТА И СЕРВИСА:</h2>
-        <div class="map-box">
-            <p style="margin-bottom: 15px; color: var(--text-gray);">Выезд на дом по всему Колпино, а также Металлострой, Понтонный, Саперный и Тельмана.</p>
-            <!-- Официальная и стабильная Google Карта Колпино по координатам -->
-            <iframe src="https://google.com" style="width: 100%; height: 400px; border: 0; border-radius: 8px; filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);"></iframe>
+        
+        <h2>УЛИЦЫ ОБСЛУЖИВАНИЯ В КОЛПИНО:</h2>
+        <div class="streets-box">
+            <p style="color: var(--text-white); font-size: 0.9rem;">Выезд электрика осуществляется по всем адресам, включая:</p>
+            <div class="streets-grid">
+                <span>ул. Анисимова</span>
+                <span>ул. Братьев Радченко</span>
+                <span>ул. Веры Слуцкой</span>
+                <span>ул. Володарского</span>
+                <span>ул. Гейдена</span>
+                <span>ул. Гоголя</span>
+                <span>ул. Губина</span>
+                <span>ул. Заводская</span>
+                <span>Загородная ул.</span>
+                <span>Ижорская ул.</span>
+                <span>ул. Ижорского Батальона</span>
+                <span>ул. Карла Маркса</span>
+                <span>Кедровая ул.</span>
+                <span>ул. Косинова</span>
+                <span>ул. Костюшко</span>
+                <span>Красноборская ул.</span>
+                <span>Красная ул.</span>
+                <span>Красноармейская ул.</span>
+                <span>ул. Культуры</span>
+                <span>Ладожский бульвар</span>
+                <span>ул. Металлургов</span>
+                <span>ул. Нахимова</span>
+                <span>Новгородская ул.</span>
+                <span>Оборонная ул.</span>
+                <span>Октябрьская ул.</span>
+                <span>Онежская ул.</span>
+                <span>ул. Павловская</span>
+                <span>Парковая ул.</span>
+                <span>Полевая ул.</span>
+                <span>ул. Правды</span>
+                <span>ул. Пролетарская</span>
+                <span>ул. Раумская</span>
+                <span>ул. Ремизова</span>
+                <span>Севастьянова ул.</span>
+                <span>ул. Стахановская</span>
+                <span>Танкистов ул.</span>
+                <span>ул. Тазаева</span>
+                <span>Тверская ул.</span>
+                <span>Тосненский пер.</span>
+                <span>ул. Труда</span>
+                <span>ул. Федотова</span>
+                <span>Финляндская ул.</span>
+            </div>
+            <p style="margin-top: 15px; color: var(--text-gray); font-size: 0.8rem;">Также обслуживаются ближайшие населенные пункты: Металлострой, Понтонный, Саперный, Тельмана.</p>
         </div>
     </div>
-    <footer><p>Колпинский район, Санкт-Петербург. Телефон: +7 (950) 030-88-30</p></footer>
+    <footer>
+        <p>Колпинский район, Санкт-Петербург. Заявки по телефону: <a href="tel:+79500308830" style="color: var(--neon-blue); text-decoration: none;">+7 (950) 030-88-30</a></p>
+        <div class="messenger-buttons" style="margin-top: 15px;">
+            <a href="https://wa.me/79500308830" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+            <a href="https://t.me/elektrikkolpino" target="_blank" class="btn btn-tg">✈️ Telegram</a>
+        </div>
+    </footer>
 </body>
 </html>
