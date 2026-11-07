@@ -6,44 +6,33 @@
     <title>Замена автоматов в Колпино</title>
     <style>
         :root { --bg-black: #050505; --neon-blue: #00f0ff; --neon-pink: #ff007f; --neon-green: #39ff14; --text-white: #ffffff; --text-gray: #a0a0a0; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
         body { background-color: var(--bg-black); color: var(--text-white); line-height: 1.6; }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        
-        nav { background-color: rgba(5, 5, 5, 0.95); padding: 20px; position: sticky; top: 0; border-bottom: 2px solid var(--neon-blue); box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); }
+        nav { background-color: #0d0d0d; padding: 20px; border-bottom: 2px solid var(--neon-blue); }
         .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: bold; color: var(--text-white); font-size: 1.4rem; text-decoration: none; text-shadow: 0 0 10px var(--neon-blue); }
         .menu { display: flex; gap: 25px; list-style: none; }
-        .menu a { color: var(--text-white); text-decoration: none; font-size: 1.1rem; padding: 8px 16px; border-radius: 4px; transition: all 0.3s; border: 1px solid transparent; }
-        .menu a:hover, .menu a.active { color: var(--neon-blue); border-color: var(--neon-blue); box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); text-shadow: 0 0 8px var(--neon-blue); }
-
-        header { padding: 50px 20px; background: #0d0d0d; margin-top: 20px; border-radius: 12px; border: 1px solid #222; text-align: center; }
-        h1 { color: var(--text-white); text-shadow: 0 0 15px var(--neon-blue); margin-bottom: 10px; }
-        
+        .menu a { color: var(--text-white); text-decoration: none; font-size: 1.1rem; padding: 8px 16px; border-radius: 4px; }
+        .menu a:hover, .menu a.active { color: var(--neon-blue); background-color: rgba(0, 240, 255, 0.1); }
+        header { padding: 40px 20px; background: #0d0d0d; text-align: center; margin-bottom: 20px; }
+        h1 { color: var(--text-white); text-shadow: 0 0 15px var(--neon-blue); }
         .content-box { background-color: #0d0d0d; padding: 30px; border-radius: 12px; border: 1px solid #222; margin: 30px 0; }
-        .content-box h2 { color: var(--neon-pink); text-shadow: 0 0 5px var(--neon-pink); margin-bottom: 20px; }
         ul { list-style: none; }
-        li { position: relative; padding-left: 35px; margin-bottom: 20px; font-size: 1.1rem; color: var(--text-gray); }
-        li strong { color: var(--text-white); }
-        li::before { content: "⚡"; position: absolute; left: 0; color: var(--neon-blue); text-shadow: 0 0 5px var(--neon-blue); }
-
-        .cta-box { text-align: center; padding: 40px; background: #0d0d0d; border-radius: 12px; border: 2px solid var(--neon-pink); box-shadow: 0 0 15px rgba(255, 0, 127, 0.2); }
-        .phone-link { display: inline-block; background-color: transparent; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 15px 35px; font-size: 1.4rem; font-weight: bold; text-decoration: none; border-radius: 50px; transition: all 0.3s; margin-top: 20px; text-shadow: 0 0 5px var(--neon-pink); }
-        .phone-link:hover { background-color: var(--neon-pink); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-pink); text-shadow: none; }
-        
+        li { margin-bottom: 15px; color: var(--text-gray); }
+        li::before { content: "⚡ "; color: var(--neon-blue); }
+        .cta-box { text-align: center; padding: 40px; background: #0d0d0d; border: 2px solid var(--neon-pink); border-radius: 12px; }
+        .phone-link { display: inline-block; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 15px 35px; font-size: 1.4rem; font-weight: bold; text-decoration: none; border-radius: 50px; }
         .messenger-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
-        .btn { display: inline-flex; align-items: center; padding: 12px 30px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; border: 2px solid transparent; transition: all 0.3s ease; }
-        .btn:hover { transform: translateY(-3px); }
-        .btn-wa { border-color: var(--neon-green); color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
-        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-green); text-shadow: none; }
-        .btn-tg { border-color: var(--neon-blue); color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); }
-        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-blue); text-shadow: none; }
-
-        footer { text-align: center; padding: 40px 20px; color: var(--text-gray); border-top: 1px solid #222; margin-top: 60px; }
+        .btn { display: inline-flex; align-items: center; padding: 12px 30px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; border: 2px solid transparent; }
+        .btn-wa { border-color: var(--neon-green); color: var(--neon-green); }
+        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); }
+        .btn-tg { border-color: var(--neon-blue); color: var(--neon-blue); }
+        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); }
+        footer { text-align: center; padding: 40px 20px; color: var(--text-gray); margin-top: 60px; }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">⚡ ЭЛЕКТРИК-КОЛПИНО</a>
@@ -54,39 +43,25 @@
             </ul>
         </div>
     </nav>
-
     <div class="container">
         <header>
-            <h1>ЗАМЕНА АВТОМАТОВ И РЕМОНТ ЩИТКОВ</h1>
-            <p>Модернизация систем защитной автоматики в Колпинском районе</p>
+            <h1>ЗАМЕНА АВТОМАТОВ И ЩИТКОВ</h1>
         </header>
-
         <div class="content-box">
-            <h2>Показания к замене коммутационных аппаратов:</h2>
             <ul>
-                <li><strong>Регулярные ложные срабатывания:</strong> Когда старый автомат стабильно выключается при стандартной нагрузке бытовых приборов в квартире.</li>
-                <li><strong>Критические повреждения:</strong> Наличие следов оплавления корпуса, искрение контактов, поломка пластиковых рычагов управления.</li>
-                <li><strong>Техническое устаревание:</strong> Замена старых советских плавких предохранителей ("пробок") на современные модульные защитные блоки.</li>
-                <li><strong>Повышение безопасности:</strong> Интеграция дифференциальных автоматов и устройств защитного отключения (УЗО) для предотвращения пожаров.</li>
+                <li>Поиск причин коротких замыканий и ложных срабатываний защиты.</li>
+                <li>Замена перегоревших пробок на современные модульные автоматы.</li>
+                <li>Mонтаж устройств защитного отключения (УЗО) и дифференциальных автоматов.</li>
             </ul>
         </div>
-
         <div class="cta-box">
-            <h3>Греется щиток или выбивает автоматы защиты?</h3>
-            <p>Оперативная техническая диагностика оборудования и замена неисправных приборов в Колпино</p>
-            
             <a href="tel:+79500308830" class="phone-link">📞 СВЯЗАТЬСЯ: +7 (950) 030-88-30</a>
-            
             <div class="messenger-buttons">
-                <a href="https://wa.me" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
-                <a href="https://t.me" target="_blank" class="btn btn-tg">✈️ Telegram</a>
+                <a href="https://wa.me/79500308830" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+                <a href="https://t.me/elektrikkolpino" target="_blank" class="btn btn-tg">✈️ Telegram</a>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>Колпино, Санкт-Петербург. Обслуживание распределительных щитов.</p>
-    </footer>
-
+    <footer><p>Колпино, Санкт-Петербург.</p></footer>
 </body>
 </html>
