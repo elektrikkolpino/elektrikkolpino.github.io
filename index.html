@@ -19,39 +19,62 @@
         
         nav { background-color: rgba(5, 5, 5, 0.95); padding: 20px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--neon-blue); box-shadow: 0 0 15px rgba(0, 240, 255, 0.3); }
         .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo { font-weight: bold; color: var(--text-white); font-size: 1.4rem; text-decoration: none; text-shadow: 0 0 10px var(--neon-blue); }
+        .logo { font-weight: bold; color: var(--text-white); font-size: 1.4rem; text-decoration: none; text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue); }
         .menu { display: flex; gap: 25px; list-style: none; }
         .menu a { color: var(--text-white); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: all 0.3s ease; padding: 8px 16px; border-radius: 4px; border: 1px solid transparent; }
-        .menu a:hover, .menu a.active { color: var(--neon-blue); border-color: var(--neon-blue); background-color: rgba(0, 240, 255, 0.05); box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+        
+        .menu a:hover, .menu a.active { 
+            color: var(--neon-blue); 
+            border-color: var(--neon-blue);
+            background-color: rgba(0, 240, 255, 0.05);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5), inset 0 0 10px rgba(0, 240, 255, 0.2);
+            text-shadow: 0 0 8px var(--neon-blue);
+        }
 
         header { text-align: center; padding: 80px 20px; background: radial-gradient(circle at center, #111 0%, #050505 100%); }
-        h1 { font-size: 3rem; margin-bottom: 15px; color: var(--text-white); text-shadow: 0 0 15px var(--neon-blue); }
+        h1 { font-size: 3rem; margin-bottom: 15px; color: var(--text-white); text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue); }
         header p { color: var(--text-gray); font-size: 1.3rem; margin-bottom: 40px; }
 
         .phone-box { margin-bottom: 30px; }
-        .phone-link { display: inline-block; background-color: transparent; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 18px 40px; font-size: 1.6rem; font-weight: bold; text-decoration: none; border-radius: 50px; text-shadow: 0 0 10px var(--neon-pink); box-shadow: 0 0 15px rgba(255, 0, 127, 0.3); transition: all 0.4s ease; }
-        .phone-link:hover { color: var(--bg-black); background-color: var(--neon-pink); box-shadow: 0 0 30px var(--neon-pink); }
+        .phone-link { display: inline-block; background-color: transparent; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 18px 40px; font-size: 1.6rem; font-weight: bold; text-decoration: none; border-radius: 50px; text-shadow: 0 0 10px var(--neon-pink); box-shadow: 0 0 15px rgba(255, 0, 127, 0.3); transition: all 0.4s ease; animation: neonPulse 1.5s infinite alternate; }
+        .phone-link:hover { color: var(--bg-black); background-color: var(--neon-pink); box-shadow: 0 0 30px var(--neon-pink); text-shadow: none; transform: scale(1.03); }
         
         .messenger-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .btn { display: inline-flex; align-items: center; padding: 12px 30px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; border: 2px solid transparent; transition: all 0.3s ease; }
         .btn:hover { transform: translateY(-3px); }
-        .btn-wa { border-color: var(--neon-green); color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
-        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-green); }
-        .btn-tg { border-color: var(--neon-blue); color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); }
-        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-blue); }
+        .btn-wa { border-color: var(--neon-green); color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); box-shadow: 0 0 10px rgba(57, 255, 20, 0.2); }
+        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-green); text-shadow: none; }
+        .btn-tg { border-color: var(--neon-blue); color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); }
+        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); box-shadow: 0 0 25px var(--neon-blue); text-shadow: none; }
 
-        h2 { font-size: 1.8rem; color: var(--text-white); margin: 50px 0 25px 0; border-left: 4px solid var(--neon-pink); padding-left: 15px; }
+        h2 { font-size: 1.8rem; color: var(--text-white); margin: 50px 0 25px 0; text-shadow: 0 0 10px var(--neon-pink); border-left: 4px solid var(--neon-pink); padding-left: 15px; }
+
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 30px 0; }
-        .card { background-color: #0d0d0d; padding: 30px; border-radius: 12px; border: 1px solid #222; transition: all 0.3s ease; text-decoration: none; color: var(--text-white); }
+        .card { background-color: #0d0d0d; padding: 30px; border-radius: 12px; border: 1px solid #222; transition: all 0.3s ease; text-decoration: none; color: var(--text-white); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
         .card:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 240, 255, 0.3); transform: translateY(-5px); }
-        .card h3 { color: var(--neon-blue); margin-bottom: 15px; font-size: 1.4rem; }
-        
-        .info-section { background-color: #0d0d0d; padding: 30px; border-radius: 12px; margin: 40px 0; border: 1px solid #222; color: var(--text-gray); }
+        .card h3 { color: var(--neon-blue); margin-bottom: 15px; font-size: 1.4rem; text-shadow: 0 0 5px var(--neon-blue); }
+        .card p { color: var(--text-gray); font-size: 1rem; }
+
+        .info-section { background-color: #0d0d0d; padding: 30px; border-radius: 12px; margin: 40px 0; border: 1px solid #222; }
+        .info-section p { color: var(--text-gray); font-size: 1.1rem; }
+
         footer { text-align: center; padding: 40px 20px; color: var(--text-gray); border-top: 1px solid #222; margin-top: 80px; }
-        footer a { color: var(--neon-blue); text-decoration: none; }
+        footer a { color: var(--neon-blue); text-decoration: none; text-shadow: 0 0 5px var(--neon-blue); }
+
+        @keyframes neonPulse {
+            from { box-shadow: 0 0 10px rgba(255, 0, 127, 0.3), inset 0 0 5px rgba(255, 0, 127, 0.1); }
+            to { box-shadow: 0 0 25px var(--neon-pink), inset 0 0 10px rgba(255, 0, 127, 0.4); }
+        }
+
+        @media (max-width: 680px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            h1 { font-size: 2.2rem; }
+            .phone-link { font-size: 1.2rem; padding: 15px 30px; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">⚡ ЭЛЕКТРИК-КОЛПИНО</a>
@@ -62,6 +85,7 @@
             </ul>
         </div>
     </nav>
+
     <header>
         <div class="container">
             <h1>ВЫЗОВ ЭЛЕКТРИКА В КОЛПИНО</h1>
@@ -70,33 +94,38 @@
                 <a href="tel:+79500308830" class="phone-link">📞 ТЕЛЕФОН: +7 (950) 030-88-30</a>
             </div>
             <div class="messenger-buttons">
-                <a href="https://wa.me" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
-                <a href="https://t.me" target="_blank" class="btn btn-tg">✈️ Telegram</a>
+                <a href="https://whatsapp.com" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+                <a href="https://telegram.me" target="_blank" class="btn btn-tg">✈️ Telegram</a>
             </div>
         </div>
     </header>
+
     <div class="container">
         <h2>НАПРАВЛЕНИЯ РАБОТ</h2>
+        
         <div class="services-grid">
             <a href="rozetki.html" class="card">
                 <h3>Замена розеток →</h3>
-                <p>Установка новых точек, надежный перенос выключателей, штробление стен и ремонт подрозетников.</p>
+                <p>Установка новых точек, надежный перенос выключателей, безопасное штробление стен и ремонт старых подрозетников.</p>
             </a>
             <a href="avtomaty.html" class="card">
                 <h3>Замена автоматов →</h3>
-                <p>Пересборка электрощитов, замена пробок, монтаж современных УЗО и модульных выключателей.</p>
+                <p>Пересборка электрощитов, замена перегоревших пробок, монтаж современных УЗО и модульных выключателей защиты.</p>
             </a>
             <div class="card">
                 <h3>Другие услуги</h3>
-                <p>Поиск скрытых повреждений кабеля, устранение коротких замыканий и монтаж люстр.</p>
+                <p>Поиск скрытых повреждений кабеля, оперативное устранение коротких замыканий, монтаж люстр и полная замена проводки.</p>
             </div>
         </div>
+
         <div class="info-section">
-            <p>Выезд мастера осуществляется по Колпино, Металлострой, Понтонному, Саперному и Тельмана по стандартам ПУЭ.</p>
+            <p>Выезд мастера на дом осуществляется по всему городу Колпино, включая Металлострой, Понтонный, Саперный и Тельмана. Все работы производятся в строгом соответствии со стандартами ПУЭ и СНиП. Точный расчет сметы происходит на объекте до начала выполнения ремонта.</p>
         </div>
     </div>
+
     <footer>
         <p>Колпинский район, Санкт-Петербург. Заявки по телефону: <a href="tel:+79500308830">+7 (950) 030-88-30</a></p>
     </footer>
+
 </body>
 </html>
