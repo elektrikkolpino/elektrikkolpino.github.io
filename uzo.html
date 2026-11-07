@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установка УЗО и дифавтоматов в Колпино</title>
+    <style>
+        :root { --bg-black: #050505; --neon-blue: #00f0ff; --neon-pink: #ff007f; --neon-green: #39ff14; --text-white: #ffffff; --text-gray: #a0a0a0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { background-color: var(--bg-black); color: var(--text-white); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        nav { background-color: #0d0d0d; padding: 15px 20px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--neon-blue); }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-weight: bold; color: var(--text-white); font-size: 1.3rem; text-decoration: none; text-shadow: 0 0 10px var(--neon-blue); }
+        .menu { display: flex; gap: 15px; list-style: none; flex-wrap: wrap; }
+        .menu a { color: var(--text-white); text-decoration: none; font-size: 0.95rem; padding: 6px 12px; border-radius: 4px; }
+        .menu a:hover, .menu a.active { color: var(--neon-blue); background-color: rgba(0, 240, 255, 0.1); }
+        header { padding: 40px 20px; background: #0d0d0d; text-align: center; margin-bottom: 20px; }
+        h1 { color: var(--text-white); text-shadow: 0 0 15px var(--neon-blue); }
+        .content-box { background-color: #0d0d0d; padding: 30px; border-radius: 12px; border: 1px solid #222; margin: 30px 0; }
+        ul { list-style: none; }
+        li { margin-bottom: 15px; color: var(--text-gray); }
+        li::before { content: "⚡ "; color: var(--neon-blue); }
+        .cta-box { text-align: center; padding: 40px; background: #0d0d0d; border: 2px solid var(--neon-pink); border-radius: 12px; }
+        .phone-link { display: inline-block; color: var(--neon-pink); border: 2px solid var(--neon-pink); padding: 15px 35px; font-size: 1.4rem; font-weight: bold; text-decoration: none; border-radius: 50px; }
+        .messenger-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
+        .btn { display: inline-flex; align-items: center; padding: 12px 30px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; border: 2px solid transparent; }
+        .btn-wa { border-color: var(--neon-green); color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
+        .btn-wa:hover { background-color: var(--neon-green); color: var(--bg-black); }
+        .btn-tg { border-color: var(--neon-blue); color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); }
+        .btn-tg:hover { background-color: var(--neon-blue); color: var(--bg-black); }
+        footer { text-align: center; padding: 40px 20px; color: var(--text-gray); margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">⚡ ЭЛЕКТРИК</a>
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="rozetki.html">Розетки</a></li>
+                <li><a href="avtomaty.html">Автоматы</a></li>
+                <li><a href="kabel.html">Кабель</a></li>
+                <li><a href="schit.html">Щитки</a></li>
+                <li><a href="uzo.html" class="active">УЗО/Дифф</a></li>
+                <li><a href="tehnika.html">Техника</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>УСТАНОВКА УЗО И ДИФАВТОМАТОВ</h1>
+            <div class="phone-box" style="margin-top: 15px;"><a href="tel:+79500308830" style="color: var(--neon-pink); text-decoration: none; font-weight: bold;">📞 +7 (950) 030-88-30</a></div>
+            <div class="messenger-buttons" style="margin-top: 15px;">
+                <a href="https://wa.me" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+                <a href="https://t.me" target="_blank" class="btn btn-tg">✈️ Telegram</a>
+            </div>
+        </header>
+        <div class="content-box">
+            <ul>
+                <li>Монтаж устройств защитного отключения (УЗО) для предотвращения ударов током при утечках.</li>
+                <li>Установка комбинированных дифференциальных автоматов на "мокрые" зоны (ванные, кухни).</li>
+                <li>Расчет токов утечки и номинальной мощности защитного оборудования под вашу нагрузку.</li>
+            </ul>
+        </div>
+        <div class="cta-box">
+            <a href="tel:+79500308830" class="phone-link">📞 ОБЕЗОПАСИТЬ ДОМ: +7 (950) 030-88-30</a>
+            <div class="messenger-buttons">
+               <a href="https://wa.me/79500308830" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+<a href="https://t.me/elektrikkolpino" target="_blank" class="btn btn-tg">✈️ Telegram</a>
+</div>
+        </div>
+    </div>
+    <footer><p>Колпино, Санкт-Петербург.</p></footer>
+</body>
+</html>
